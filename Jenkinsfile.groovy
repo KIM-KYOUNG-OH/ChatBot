@@ -20,7 +20,7 @@ pipeline {
 
         stage("Build") {
             steps {
-                sh "pwd"
+                sh "docker build -t recruit-chatbot ./workspace/chatbot/"
             }
         }
 
