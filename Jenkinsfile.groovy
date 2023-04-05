@@ -15,15 +15,14 @@ pipeline {
         stage("Pull") {
             steps {
                 git url: "${GIT_URL}", branch: "fix-jenkins-pipeline", poll: true, changelog: true
-                sh "docker ps"
             }
         }
 
-//         stage("Build") {
-//             steps {
-//                 sh "./gradlew clean build"
-//             }
-//         }
+        stage("Build") {
+            steps {
+                sh "pwd"
+            }
+        }
 
 //         stage("Send Jar") {
 //             steps {
