@@ -15,6 +15,7 @@ pipeline {
         stage("Pull") {
             steps {
                 git url: "${GIT_URL}", branch: "fix-jenkins-pipeline", poll: true, changelog: true
+                sh "pwd"
             }
         }
 
